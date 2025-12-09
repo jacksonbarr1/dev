@@ -35,6 +35,7 @@ for s in $runs_dir; do
     if basename $s | grep -vq "$grep"; then
         log "grep \"$grep\" filtered out $s"
         continue
+    fi
 
     log "Running script: $s"
 
