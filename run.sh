@@ -41,7 +41,5 @@ for s in $runs_dir; do
 
     log "Running script: $s"
 
-    if [[ $dry_run == "0" ]]; then
-        $s
-    fi
+    $s
 done
