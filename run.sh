@@ -19,8 +19,6 @@ while [[ $# -gt 0 ]]; do
     shift
 done
 
-echo "1"
-
 log() {
     if [[ $dry_run == "1" ]]; then
         echo "[DRY_RUN]: $1"
@@ -30,4 +28,17 @@ log() {
 }
 
 log "RUN: env: $env -- grep: $grep"
-echo "2"
+
+runs_dir=$(find $script_dir/runs -mindepth 1 -maxdepth 1 -executable)
+
+for s in $runs_dir; do
+    if basename $s | grep -vq "$grep"; then
+        log "grep \"$grep\" filtered out $s"
+        continue
+
+    log "Running script: $s"
+
+    if [[ $dry_run == "0" ]]; then
+        $s
+    fi
+done
