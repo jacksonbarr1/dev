@@ -29,6 +29,7 @@ fi
 git clone https://github.com/jacksonbarr1/dev $HOME/personal/dev
 
 cd $HOME/personal/dev
+git pull
 chmod +x run.sh
 export DEV_ENV=$(pwd)
 echo "Initialization completed, running scripts..."
