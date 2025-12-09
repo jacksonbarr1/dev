@@ -9,8 +9,9 @@ sudo rm -rf /usr/local/bin/nvim
 sudo rm -rf /usr/local/share/nvim
 
 echo "Cloning neovim (stable)..."
-git clone --depth 1 --branch stable https://github.com/neovim/neovim.git $HOME/personal/src
+git clone --depth 1 --branch stable https://github.com/neovim/neovim.git $HOME/personal/src/neovim
 
+mkdir -p $HOME/neovim
 pushd $HOME/personal/src/neovim
 echo "Building neovim from source..."
 
