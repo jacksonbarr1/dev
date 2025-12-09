@@ -31,6 +31,8 @@ log "RUN: env: $env -- grep: $grep"
 
 runs_dir=$(find $script_dir/runs -mindepth 1 -maxdepth 1 -executable)
 
+echo "Found runs in runs_dir: $runs_dir"
+
 for s in $runs_dir; do
     if basename $s | grep -vq "$grep"; then
         log "grep \"$grep\" filtered out $s"
