@@ -34,3 +34,4 @@ chmod +x run.sh
 export DEV_ENV=$(pwd)
 echo "Initialization completed, running scripts..."
 ./run.sh
+chmod -x run.sh # Ensure git doesn't track executable bit as a difference
