@@ -12,7 +12,7 @@ else
     echo "Bare dotfiles repo already exists."
 fi
 
-alias $CONFIG_CMD="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+echo >"alias $CONFIG_CMD='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >>"$HOME/.bashrc"
 
 echo "Deploying configurations to $HOME"
 
