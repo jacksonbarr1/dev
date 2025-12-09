@@ -6,10 +6,10 @@ if [ -z "$DEV_ENV" ]; then
     exit 1
 fi
 
-grep = ""
-dry_run = ""
+grep=""
+dry_run=""
 
-while [[ $# -gt 0]]; do
+while [[ $# -gt 0 ]]; do
     echo "ARG: \"$1\""
     if [[ "$1" == "--dry" ]]; then
         dry_run="1"
