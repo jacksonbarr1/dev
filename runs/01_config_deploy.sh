@@ -13,6 +13,7 @@ else
 fi
 
 echo >"alias $CONFIG_CMD='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >>"$HOME/.bashrc"
+source "$HOME/.bashrc"
 
 echo "Deploying configurations to $HOME"
 
