@@ -10,9 +10,6 @@ if [ -f "$INSTALL_DIR" ]; then
 else
     echo "Neovim not found. Proceeding with installation."
 
-    echo "Installing required build dependencies..."
-    sudo apt install -y curl wget build-essential cmake gettext libtool libtool-bin
-
     echo "Cloning and checkout out tag $NEOVIM_TAG..."
     mkdir -p "$HOME/src"
 
