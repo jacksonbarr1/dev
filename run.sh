@@ -19,6 +19,8 @@ while [[ $# -gt 0]]; do
     shift
 done
 
+echo "1"
+
 log() {
     if [[ $dry_run == "1" ]]; then
         echo "[DRY_RUN]: $1"
@@ -28,3 +30,4 @@ log() {
 }
 
 log "RUN: env: $env -- grep: $grep"
+echo "2"
