@@ -29,4 +29,5 @@ fi
 git clone https://github.com/jacksonbarr1/dev $HOME/personal/dev
 
 pushd $HOME/personal/dev
+chmod +x run.sh
 echo "Initialization completed, running scripts..."
