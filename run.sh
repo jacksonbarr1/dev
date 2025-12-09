@@ -29,7 +29,7 @@ log() {
 
 log "RUN: env: $env -- grep: $grep"
 
-runs_dir=$(find $script_dir/runs -mindepth 1 -maxdepth 1 -executable)
+runs_dir=$(find $script_dir/runs -mindepth 1 -maxdepth 1 -executable | sort)
 
 echo "Found runs in runs_dir: $runs_dir"
 
